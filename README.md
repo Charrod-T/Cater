@@ -1,16 +1,36 @@
-# React + Vite
+# Cater – Premium Catering Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive marketing website for **Cater**, designed to showcase premium culinary services, highlight brand elegance, and convert visitors into clients through clear calls to action.
 
-Currently, two official plugins are available:
+## 🥂 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This website presents Fat Full Catering as a high-end catering service, emphasizing culinary excellence, refined presentation, and impeccable service. The hero section immediately communicates value with strong typography, rich imagery, and conversion-focused buttons.
 
-## React Compiler
+## ✨ Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Elegant Hero Section**
+  - Full-width background imagery with dark overlay for readability
+  - Strong headline hierarchy: *Culinary Excellence Delivered*
+  - Primary and secondary call-to-action buttons
 
-## Expanding the ESLint configuration
+- **Responsive Navigation Bar**
+  - Brand logo and company name
+  - Clear navigation links (Home, About, Gallery, Contact)
+  - Highlighted “Get Quote” button for conversions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Modern UI / UX**
+  - Premium color palette (dark tones with gold/orange accents)
+  - Clean typography pairing for luxury branding
+  - Smooth spacing and layout consistency
+
+- **Mobile-Friendly Design**
+  - Fully responsive across desktop, tablet, and mobile devices
+  - Touch-friendly buttons and scalable text
+
+## 🛠️ Tech Stack
+
+- **HTML5** – Semantic, accessible markup
+- **CSS3 / Tailwind CSS** *(if applicable)* – Responsive layout and styling
+- **JavaScript** *(optional)* – Interactions and enhancements
+- **Google Fonts** – Elegant serif and sans-serif typography
+- **Optimized Images** – High-quality visuals with overlays for performance

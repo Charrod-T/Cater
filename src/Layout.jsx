@@ -59,7 +59,7 @@ export default function Layout({ children, currentPageName }) {
                 className="h-14 w-auto group-hover:scale-105 transition-transform"
               />
               <span className="text-2xl font-bold text-neutral-900" style={{ fontFamily: 'var(--font-heading)' }}>
-    Catering
+    Cater
   </span>
             </Link>
 
@@ -158,7 +158,7 @@ export default function Layout({ children, currentPageName }) {
             <div>
               <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h3>
               <div className="space-y-2.5 text-neutral-400 text-sm">
-                <p>info@fatfullcatering.com</p>
+                <p>info@cater.com</p>
                 <p>(555) 254-7986</p>
                 <p>123 Culinary Street<br />Food City, FC 12345</p>
               </div>
