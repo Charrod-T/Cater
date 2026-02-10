@@ -1,35 +1,63 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Toaster } from "./components/ui/toaster";
+import { pagesConfig } from "./pages.config";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
+// Destructure config
+const { Pages, Layout, mainPage } = pagesConfig;
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+// Resolve main page
+const mainPageKey = mainPage ?? Object.keys(Pages)[0];
+const MainPage = Pages[mainPageKey];
+
+// Layout wrapper
+const LayoutWrapper = ({ children, currentPageName }) =>
+  Layout ? (
+    <Layout currentPageName={currentPageName}>
+      {children}
+    </Layout>
+  ) : (
+    <>{children}</>
+  );
+
+// Simple fallback page
+function PageNotFound() {
+  return <h1>404 — Page Not Found</h1>;
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+      <Toaster />
+
+      <Routes>
+        {/* Main page */}
+        <Route
+          path="/"
+          element={
+            <LayoutWrapper currentPageName={mainPageKey}>
+              <MainPage />
+            </LayoutWrapper>
+          }
+        />
+
+        {/* Other pages */}
+        {Object.entries(Pages).map(([path, Page]) => (
+          <Route
+            key={path}
+            path={`/${path}`}
+            element={
+              <LayoutWrapper currentPageName={path}>
+                <Page />
+              </LayoutWrapper>
+            }
+          />
+        ))}
+
+        {/* Catch-all */}
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
