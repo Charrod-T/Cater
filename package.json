@@ -1,5 +1,6 @@
 {
   "name": "cater",
+  "homepage":"https://charrod-t.github.io/Cater/", 
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
@@ -15,7 +18,6 @@
     "@tanstack/react-query": "^5.90.20",
     "class-variance-authority": "^0.7.1",
     "framer-motion": "^12.34.0",
-    "gh-pages": "^6.3.0",
     "lodash": "^4.17.23",
     "lucide-react": "^0.563.0",
     "motion": "^12.34.0",
