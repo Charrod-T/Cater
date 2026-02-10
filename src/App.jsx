@@ -1,6 +1,6 @@
 import { Toaster } from "./components/ui/toaster";
 import { pagesConfig } from "./pages.config";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Routes, Route } from "react-router-dom"; // No Router here
 
 // Destructure config
 const { Pages, Layout, mainPage } = pagesConfig;
@@ -26,7 +26,7 @@ function PageNotFound() {
 
 function App() {
   return (
-    <Router>
+    <>
       <Toaster />
 
       <Routes>
@@ -56,7 +56,7 @@ function App() {
         {/* Catch-all */}
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-    </Router>
+    </>
   );
 }
 
